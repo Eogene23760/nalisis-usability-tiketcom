@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Analisis Usability Tiket.com — 10 User-Interactive Guidelines</title>
+<style>
+  :root{
+    --biru:#0064d2; --kuning:#ffd400; --teks:#1a2b4a; --abu:#8a94a6; --bgsoft:#eef4fc;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{font-family:'Segoe UI',Arial,sans-serif; color:var(--teks); background:#5a6578;}
+  .toolbar{
+    position:fixed; top:12px; right:12px; z-index:999; display:flex; gap:8px;
+  }
+  .toolbar button{
+    background:var(--biru); color:#fff; border:none; padding:10px 16px; border-radius:8px;
+    font-size:14px; cursor:pointer; box-shadow:0 2px 8px rgba(0,0,0,.25);
+  }
+  .toolbar button:hover{background:#0051a8;}
+  .slide{
+    width:1120px; min-height:630px; margin:28px auto; background:#fff; border-radius:12px;
+    padding:60px 70px; box-shadow:0 10px 40px rgba(0,0,0,.3); position:relative;
+    display:flex; flex-direction:column; page-break-after:always;
+  }
+  .slide h1{color:var(--biru); font-size:2.4em; margin-bottom:.3em; line-height:1.15;}
+  .slide h2{color:var(--biru); border-bottom:3px solid var(--kuning); padding-bottom:10px; margin-bottom:24px; font-size:1.8em;}
+  .slide h3{color:var(--teks); font-weight:600; margin:4px 0;}
+  .slide h4{color:var(--abu); font-weight:500; margin:4px 0;}
+  .slide p, .slide li{font-size:1.1em; line-height:1.6; margin:6px 0;}
+  .slide ul{margin-left:22px; margin-top:8px;}
+  .lead{align-items:center; justify-content:center; text-align:center;}
+  .lead .platform{margin-top:30px; font-size:1.15em; color:var(--abu);}
+  table{width:100%; border-collapse:collapse; margin-top:10px; font-size:1em;}
+  th{background:var(--biru); color:#fff; padding:11px 14px; text-align:left;}
+  td{padding:10px 14px; border-bottom:1px solid #dfe6f2;}
+  tr:nth-child(even){background:var(--bgsoft);}
+  .center-col{text-align:center;}
+  .ok{color:#1a7f37; font-weight:600;}
+  .warn{color:#b35900; font-weight:600;}
+  .score{display:inline-block; background:var(--kuning); color:var(--teks); font-weight:700;
+    padding:8px 18px; border-radius:30px; margin-top:auto; align-self:flex-start; font-size:1.05em;}
+  .pagenum{position:absolute; bottom:18px; right:28px; color:var(--abu); font-size:.85em;}
+  .foot{position:absolute; bottom:18px; left:28px; color:var(--abu); font-size:.72em;}
+  strong{color:var(--biru);}
+  blockquote{border-left:5px solid var(--kuning); padding-left:16px; color:#46556b; margin-top:14px; font-style:italic;}
+  .two-col{display:flex; gap:40px;}
+  .two-col > div{flex:1;}
+  @media print{
+    body{background:#fff;}
+    .toolbar{display:none;}
+    .slide{box-shadow:none; margin:0; border-radius:0; width:100%; min-height:100vh; page-break-after:always;}
+  }
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <button onclick="window.print()">🖨️ Simpan sebagai PDF</button>
+</div>
+
+<!-- Slide 1 -->
+<section class="slide lead">
+  <h1>Analisis Usability <span style="color:#0064d2">Tiket.com</span></h1>
+  <h3>Evaluasi Website &amp; Native App</h3>
+  <h3>Berdasarkan 10 User-Interactive Guidelines</h3>
+  <h4>(Nielsen's Heuristics + Online Documentation)</h4>
+  <div class="platform">🌐 Website &nbsp;·&nbsp; 📱 Native App (Android/iOS) &nbsp;·&nbsp; 📟 Tablet/Pad</div>
+  <div class="foot">Analisis Usability Tiket.com</div>
+</section>
+
+<!-- Slide 2 -->
+<section class="slide">
+  <h2>Tentang Produk</h2>
+  <ul>
+    <li><strong>Tiket.com</strong> — salah satu <strong>Online Travel Agent (OTA)</strong> pertama di Indonesia (berdiri <strong>2011</strong>, Jakarta).</li>
+    <li>Satu aplikasi untuk banyak layanan:
+      <ul>
+        <li>✈️ Tiket Pesawat &nbsp; 🏨 Hotel &nbsp; 🚆 Kereta Api</li>
+        <li>🚗 Rental Mobil &nbsp; 🎢 Atraksi (To Do) &nbsp; 🎵 Konser</li>
+      </ul>
+    </li>
+    <li><strong>Platform:</strong> Website responsif, Native App (Android &amp; iOS), kompatibel tablet/pad.</li>
+  </ul>
+  <blockquote>Tujuan: mengevaluasi Tiket.com terhadap 10 panduan interaksi pengguna.</blockquote>
+  <div class="pagenum">2</div>
+</section>
+
+<!-- Slide 3 -->
+<section class="slide">
+  <h2>Metodologi</h2>
+  <ul>
+    <li><strong>Kerangka:</strong> 10 Usability Heuristics (Jakob Nielsen) + "Provide Online Documentation".</li>
+    <li><strong>Sumber data:</strong>
+      <ul>
+        <li>Website &amp; aplikasi Tiket.com</li>
+        <li>Case study UX publik (Medium)</li>
+        <li>Review Google Play &amp; App Store</li>
+        <li>Repositori penelitian usability (Binus, UKWMS)</li>
+      </ul>
+    </li>
+    <li><strong>Skala penilaian:</strong> 1 (buruk) – 5 (sangat baik).</li>
+  </ul>
+  <div class="pagenum">3</div>
+</section>
+
+<!-- Slide 4 -->
+<section class="slide">
+  <h2>📊 Ringkasan Skor</h2>
+  <table>
+    <tr><th>No</th><th>Guideline</th><th class="center-col">Skor</th><th>Status</th></tr>
+    <tr><td>1</td><td>Consistency &amp; Standards</td><td class="center-col">4.5</td><td>Sangat Baik</td></tr>
+    <tr><td>2</td><td>Visibility of System Status</td><td class="center-col">4.5</td><td>Sangat Baik</td></tr>
+    <tr><td>3</td><td>Match System &amp; Real World</td><td class="center-col">4.0</td><td>Baik</td></tr>
+    <tr><td>4</td><td>User Control &amp; Freedom</td><td class="center-col">3.5</td><td>Baik</td></tr>
+    <tr><td>5</td><td>Error Prevention</td><td class="center-col">4.0</td><td>Baik</td></tr>
+    <tr><td>6</td><td>Recognition vs Recall</td><td class="center-col">4.0</td><td>Baik</td></tr>
+    <tr><td>7</td><td>Flexibility &amp; Efficiency</td><td class="center-col">3.5</td><td>Baik</td></tr>
+    <tr><td>8</td><td>Aesthetic &amp; Minimalist</td><td class="center-col">4.0</td><td>Baik</td></tr>
+    <tr><td>9</td><td>Recover from Errors</td><td class="center-col">3.5</td><td>Baik</td></tr>
+    <tr><td>10</td><td>Online Documentation</td><td class="center-col">4.0</td><td>Baik</td></tr>
+    <tr><td></td><td><strong>Rata-rata</strong></td><td class="center-col"><strong>≈ 4.0</strong></td><td><strong>Baik → Sangat Baik</strong></td></tr>
+  </table>
+  <div class="pagenum">4</div>
+</section>
+
+<!-- Slide 5 -->
+<section class="slide">
+  <h2>1️⃣ Consistency and Standards</h2>
+  <p><strong>Prinsip:</strong> Elemen &amp; istilah yang sama berarti sama; ikuti konvensi platform.</p>
+  <div class="two-col">
+    <div>
+      <p class="ok">✅ Kekuatan</p>
+      <ul>
+        <li>Komponen UI konsisten di web &amp; app.</li>
+        <li>Ikon kategori seragam lintas platform.</li>
+        <li>Mengikuti Material Design &amp; HIG (iOS).</li>
+        <li>Pola pencarian sesuai standar OTA.</li>
+      </ul>
+    </div>
+    <div>
+      <p class="warn">⚠️ Kelemahan</p>
+      <ul>
+        <li>Gaya visual landing page promo kadang berbeda dari pola inti.</li>
+      </ul>
+    </div>
+  </div>
+  <span class="score">Skor: 4.5 / 5 — Sangat Baik</span>
+  <div class="pagenum">5</div>
+</section>
+
+<!-- Slide 6 -->
+<section class="slide">
+  <h2>2️⃣ Visibility of System Status</h2>
+  <p><strong>Prinsip:</strong> Sistem selalu memberi tahu apa yang sedang terjadi.</p>
+  <p class="ok">✅ Kekuatan</p>
+  <ul>
+    <li>Loading indicator jelas ("Mencari harga terbaik...").</li>
+    <li>Stepper alur: Pilih → Isi Data → Bayar → Selesai.</li>
+    <li>Status pesanan real-time di <strong>My Order 3.0</strong> &amp; <strong>Trip View</strong>.</li>
+    <li>Countdown timer batas pembayaran.</li>
+    <li>Notifikasi push &amp; email tiap perubahan status.</li>
+  </ul>
+  <span class="score">Skor: 4.5 / 5 — Sangat Baik</span>
+  <div class="pagenum">6</div>
+</section>
+
+<!-- Slide 7 -->
+<section class="slide">
+  <h2>3️⃣ Match Between System &amp; Real World</h2>
+  <p><strong>Prinsip:</strong> Gunakan bahasa &amp; konsep yang familiar bagi pengguna.</p>
+  <div class="two-col">
+    <div>
+      <p class="ok">✅ Kekuatan</p>
+      <ul>
+        <li>Bahasa Indonesia sehari-hari ("Mau liburan ke mana?").</li>
+        <li>Istilah nyata: Pulang-Pergi, Dewasa/Anak/Bayi, Check-in/out.</li>
+        <li>Ikon metafora nyata (pesawat, ranjang, kereta).</li>
+        <li>Pilihan bahasa ID/EN.</li>
+      </ul>
+    </div>
+    <div>
+      <p class="warn">⚠️ Kelemahan</p>
+      <ul>
+        <li>Jargon maskapai (kelas fare, "fare rules") kurang dijelaskan.</li>
+      </ul>
+    </div>
+  </div>
+  <span class="score">Skor: 4.0 / 5 — Baik</span>
+  <div class="pagenum">7</div>
+</section>
+
+<!-- Slide 8 -->
+<section class="slide">
+  <h2>4️⃣ User Control and Freedom</h2>
+  <p><strong>Prinsip:</strong> Sediakan "pintu darurat" — back, batal, undo.</p>
+  <div class="two-col">
+    <div>
+      <p class="ok">✅ Kekuatan</p>
+      <ul>
+        <li>Tombol Back &amp; breadcrumb tanpa kehilangan data.</li>
+        <li>Fitur ubah/batal, refund &amp; reschedule.</li>
+        <li>Filter bisa di-reset; wishlist menyimpan pilihan.</li>
+      </ul>
+    </div>
+    <div>
+      <p class="warn">⚠️ Kelemahan</p>
+      <ul>
+        <li>Alur booking <strong>konser</strong> panjang — pilih tiket &amp; tanggal <strong>2x</strong>.</li>
+        <li>Biaya refund tak terduga → terasa "terjebak".</li>
+      </ul>
+    </div>
+  </div>
+  <span class="score">Skor: 3.5 / 5 — Baik</span>
+  <div class="pagenum">8</div>
+</section>
+
+<!-- Slide 9 -->
+<section class="slide">
+  <h2>5️⃣ Error Prevention</h2>
+  <p><strong>Prinsip:</strong> Cegah error sebelum terjadi.</p>
+  <div class="two-col">
+    <div>
+      <p class="ok">✅ Kekuatan</p>
+      <ul>
+        <li>Validasi input real-time (email, telepon, nama).</li>
+        <li>Date picker cegah tanggal tidak valid.</li>
+        <li>Ringkasan pesanan sebelum pembayaran.</li>
+        <li>Auto-complete kota/bandara kurangi salah ketik.</li>
+        <li>Kebijakan non-refundable ditandai jelas.</li>
+      </ul>
+    </div>
+    <div>
+      <p class="warn">⚠️ Kelemahan</p>
+      <ul>
+        <li>Perubahan harga saat lanjut ke pembayaran bisa mengejutkan.</li>
+      </ul>
+    </div>
+  </div>
+  <span class="score">Skor: 4.0 / 5 — Baik</span>
+  <div class="pagenum">9</div>
+</section>
+
+<!-- Slide 10 -->
+<section class="slide">
+  <h2>6️⃣ Recognition Rather Than Recall</h2>
+  <p><strong>Prinsip:</strong> Tampilkan opsi, jangan paksa pengguna mengingat.</p>
+  <div class="two-col">
+    <div>
+      <p class="ok">✅ Kekuatan</p>
+      <ul>
+        <li>Riwayat pencarian terakhir di homepage.</li>
+        <li>Autofill data penumpang dari profil.</li>
+        <li>Saran kota/tujuan populer.</li>
+        <li>Metode pembayaran tersimpan.</li>
+        <li>Ikon + label (bukan ikon saja).</li>
+      </ul>
+    </div>
+    <div>
+      <p class="warn">⚠️ Kelemahan</p>
+      <ul>
+        <li>Cara pakai poin (TIX Point) sulit dikenali sebagian pengguna.</li>
+      </ul>
+    </div>
+  </div>
+  <span class="score">Skor: 4.0 / 5 — Baik</span>
+  <div class="pagenum">10</div>
+</section>
+
+<!-- Slide 11 -->
+<section class="slide">
+  <h2>7️⃣ Flexibility and Efficiency of Use</h2>
+  <p><strong>Prinsip:</strong> Akselerator untuk ahli, tetap mudah untuk pemula.</p>
+  <div class="two-col">
+    <div>
+      <p class="ok">✅ Kekuatan</p>
+      <ul>
+        <li>Satu app untuk banyak layanan → efisien.</li>
+        <li>Filter &amp; sorting canggih (harga, bintang, waktu).</li>
+        <li>Data tersimpan untuk repeat user.</li>
+        <li>Promo code, TIX Point, login sosial.</li>
+      </ul>
+    </div>
+    <div>
+      <p class="warn">⚠️ Kelemahan</p>
+      <ul>
+        <li>Alur konser &amp; hotel versi lama terlalu banyak langkah.</li>
+        <li>Skor efisiensi penelitian sebagian <strong>&lt; 70%</strong>.</li>
+      </ul>
+    </div>
+  </div>
+  <span class="score">Skor: 3.5 / 5 — Baik</span>
+  <div class="pagenum">11</div>
+</section>
+
+<!-- Slide 12 -->
+<section class="slide">
+  <h2>8️⃣ Aesthetic and Minimalist Design</h2>
+  <p><strong>Prinsip:</strong> Hindari informasi yang tak relevan.</p>
+  <div class="two-col">
+    <div>
+      <p class="ok">✅ Kekuatan</p>
+      <ul>
+        <li>Tampilan bersih &amp; modern, hierarki visual jelas.</li>
+        <li>Whitespace &amp; card memudahkan scanning.</li>
+        <li>CTA utama ("Cari", "Pesan") kontras &amp; menonjol.</li>
+        <li>Fokus tugas utama: search bar besar di tengah.</li>
+      </ul>
+    </div>
+    <div>
+      <p class="warn">⚠️ Kelemahan</p>
+      <ul>
+        <li>Homepage padat banner promo &amp; pop-up → kurang minimalis.</li>
+      </ul>
+    </div>
+  </div>
+  <span class="score">Skor: 4.0 / 5 — Baik</span>
+  <div class="pagenum">12</div>
+</section>
+
+<!-- Slide 13 -->
+<section class="slide">
+  <h2>9️⃣ Recognise, Diagnose &amp; Recover from Errors</h2>
+  <p><strong>Prinsip:</strong> Pesan error jelas, tunjukkan masalah + solusi.</p>
+  <div class="two-col">
+    <div>
+      <p class="ok">✅ Kekuatan</p>
+      <ul>
+        <li>Pesan manusiawi ("Pembayaran gagal, coba metode lain").</li>
+        <li>Field salah ditandai merah + penjelasan.</li>
+        <li>Opsi "coba lagi" / metode alternatif saat gagal bayar.</li>
+      </ul>
+    </div>
+    <div>
+      <p class="warn">⚠️ Kelemahan</p>
+      <ul>
+        <li>Error server/koneksi kadang generik tanpa solusi.</li>
+        <li>Diagnosis biaya refund kurang jelas (keluhan review).</li>
+      </ul>
+    </div>
+  </div>
+  <span class="score">Skor: 3.5 / 5 — Baik</span>
+  <div class="pagenum">13</div>
+</section>
+
+<!-- Slide 14 -->
+<section class="slide">
+  <h2>🔟 Provide Online Documentation</h2>
+  <p><strong>Prinsip:</strong> Bantuan mudah dicari, fokus tugas, ringkas.</p>
+  <div class="two-col">
+    <div>
+      <p class="ok">✅ Kekuatan</p>
+      <ul>
+        <li><strong>Help Center / Pusat Bantuan</strong> di web &amp; app, FAQ per kategori.</li>
+        <li><strong>Customer Care 24 jam</strong> (email, live chat, telepon).</li>
+        <li>Panduan langkah refund, reschedule, ubah data.</li>
+        <li>Asisten chat <strong>"t-man"</strong> untuk jawaban cepat.</li>
+      </ul>
+    </div>
+    <div>
+      <p class="warn">⚠️ Kelemahan</p>
+      <ul>
+        <li>Sebagian artikel umum; kasus spesifik tetap hubungi agen.</li>
+      </ul>
+    </div>
+  </div>
+  <span class="score">Skor: 4.0 / 5 — Baik</span>
+  <div class="pagenum">14</div>
+</section>
+
+<!-- Slide 15 -->
+<section class="slide">
+  <h2>✅ Kesimpulan</h2>
+  <p style="font-size:1.3em;"><strong>Rata-rata ≈ 4.0 / 5 — Baik hingga Sangat Baik</strong></p>
+  <div class="two-col" style="margin-top:14px;">
+    <div>
+      <p class="ok">🔵 Kekuatan Utama</p>
+      <ul>
+        <li>Konsistensi desain lintas platform.</li>
+        <li>Visibilitas status sistem (My Order 3.0, timer, tracking).</li>
+        <li>Kesesuaian bahasa &amp; ikon dengan pengguna Indonesia.</li>
+      </ul>
+    </div>
+    <div>
+      <p class="warn">🟡 Perlu Ditingkatkan</p>
+      <ul>
+        <li>Efisiensi alur (konser &amp; alur lama).</li>
+        <li>Transparansi &amp; kontrol refund/pembatalan.</li>
+        <li>Kepadatan banner homepage.</li>
+        <li>Pesan error lebih spesifik &amp; solutif.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="pagenum">15</div>
+</section>
+
+<!-- Slide 16 -->
+<section class="slide">
+  <h2>💡 Rekomendasi Perbaikan</h2>
+  <ul style="font-size:1.2em; line-height:2;">
+    <li><strong>1.</strong> Pangkas langkah alur booking konser (hapus pemilihan ganda).</li>
+    <li><strong>2.</strong> Tampilkan rincian biaya refund di awal sebelum pengguna commit.</li>
+    <li><strong>3.</strong> Sederhanakan homepage — fokus ke search, promo di area sekunder.</li>
+    <li><strong>4.</strong> Perkaya pesan error dengan diagnosis + langkah pemulihan jelas.</li>
+  </ul>
+  <div class="pagenum">16</div>
+</section>
+
+<!-- Slide 17 -->
+<section class="slide">
+  <h2>📚 Referensi</h2>
+  <ul>
+    <li>UI/UX Case Study for Travel App (tiket.com) — Medium</li>
+    <li>Improving Tiket.com's Flow of Booking Concert Tickets — Medium</li>
+    <li>The long and winding road to My Order 3.0 — tiket.com Medium</li>
+    <li>Improving TIX Point at Tiket.com Apps — Medium</li>
+    <li>tiket.com — Google Play &amp; App Store</li>
+    <li>Studi Usability Tiket.com — Repositori Binus &amp; UKWMS</li>
+    <li>Nielsen Norman Group — 10 Usability Heuristics</li>
+  </ul>
+  <blockquote>Isi dirangkum/diparafrase ulang dari sumber publik untuk kepatuhan lisensi.</blockquote>
+  <div class="pagenum">17</div>
+</section>
+
+<!-- Slide 18 -->
+<section class="slide lead">
+  <h1>Terima Kasih 🙏</h1>
+  <h3>Analisis Usability Tiket.com</h3>
+  <h4>10 User-Interactive Guidelines</h4>
+</section>
+
+</body>
+</html>
